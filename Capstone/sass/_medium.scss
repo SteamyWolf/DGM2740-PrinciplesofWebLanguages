@@ -1,0 +1,44 @@
+header {
+	width: 100%;
+	padding:0 0 0 250px;
+	height: 0;
+	h1 {
+		float: left;
+		padding: 0;
+		margin: 25px 0 0 20px;
+	}
+	.logo {
+		float: left;
+		width: 40px;
+		padding-top: 10px;
+	}
+}
+
+.indexM {
+	grid-template-columns: 1fr 1fr 1fr;
+	-ms-grid-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto;
+	grid-template-areas: 
+		"t t t"
+		"a b c"
+		"d e f"
+}
+
+.checks {
+	grid-area: t;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	-ms-grid-columns: 1fr 1fr;
+	grid-template-areas: 
+		"t1 t2";
+
+	.check1 {
+		grid-area: t1;
+		padding-left: 120px;
+	}
+	.check2 {
+		grid-area: t2;
+	}
+}
+
+.account {max-height: 500px;}
