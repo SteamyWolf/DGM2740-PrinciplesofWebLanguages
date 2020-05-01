@@ -1,0 +1,129 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: $fontFamily;
+    font-weight: $regularWeight;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem $gutter;
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    h1 {
+        margin: 0;
+        font-weight: $heavyWeight;
+    } // end of h1
+    h2 {
+        margin: 0; 
+        font-weight: $regularWeight;
+    } // end of h2
+    figure {
+        width: 100px;
+        margin: 0;
+    }
+} // end of header!
+
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: #666;
+
+     ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+}
+     ul li {
+        float: left;
+        width: 25%;
+}
+     ul li a {
+        display: block;
+        background-color: #444;
+        color: #eee;
+        border-left: 1px solid #777;
+        padding: .5rem 0;
+        text-decoration: none;
+        font-size: .9rem;
+        text-align: center;
+}
+     ul li:first-child a {
+         border-left: none;
+}
+
+     ul li a:hover {
+        background-color: #eee;
+        color: #333;
+}
+     ul li.active a {
+        background-color: #000;
+        color: #fff;
+}
+} // end of nav
+/*----------- MAIN --------------*/
+main {
+    padding: 0 0 0 $gutter;
+    min-height: 10rem;
+    margin-right: $gutter;
+
+
+    figure.hero {
+        width: 100%;
+        margin: 0 0 1rem 0;
+        float: left;
+}
+
+    figure.hero img {
+        width: 100%;
+        margin-right: $gutter;
+}
+
+
+    h1 {
+        color: $primaryColor;
+        font-weight: $heavyWeight;
+}
+}
+main figure.bodyImg {
+    width: 40%;
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+main figure.bodyImg img {
+    width: 100%;
+}
+
+
+main figure.bodyImg figcaption {
+    text-align: center;
+    font-size: .75rem;
+}
+ // end of main
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: $primaryColor;
+    padding: .5rem $gutter;
+    text-align: center;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
